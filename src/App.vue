@@ -9,15 +9,20 @@
         <span class="letter b">b</span>
         <span class="letter o">o</span>
       </div>
-      <div class="search-container">
-        <input
-          type="text"
-          v-model="searchQuery"
-          @keyup.enter="handleSearch"
-          placeholder="Search Mugabo or type a URL"
-          class="search-input google-style"
-        />
-      </div>
+  <div class="search-container">
+    <input
+      type="text"
+      v-model="searchQuery"
+      @keyup.enter="handleSearch"
+      placeholder="Search Mugabo or type a URL"
+      class="search-input google-style"
+    />
+    <button class="search-icon" @click="handleSearch" aria-label="Search">
+      <svg focusable="false" viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#5f6368" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+      </svg>
+    </button>
+  </div>
     </div>
     <footer class="footer">
       <div class="footer-nav">
@@ -103,6 +108,25 @@ html, body, #app {
   width: 584px;
   max-width: 90vw;
   margin-bottom: 24px;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon svg {
+  display: block;
 }
 
 .search-input {
@@ -158,5 +182,46 @@ html, body, #app {
 
 .phone-number {
   font-weight: 600;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .letter {
+    font-size: 48px;
+    margin: 0 2px;
+  }
+
+  .search-container {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 0 10px;
+  }
+
+  .search-input {
+    height: 40px;
+    font-size: 14px;
+    padding: 0 12px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .footer {
+    font-size: 12px;
+    padding: 10px 0;
+  }
+
+  .phone-number {
+    font-weight: 600;
+    font-size: 12px;
+  }
 }
 </style>

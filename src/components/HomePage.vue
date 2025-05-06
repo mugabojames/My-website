@@ -141,4 +141,48 @@ export default {
   color: #0F9D58;
   user-select: none;
 }
+
+/* Responsive styles for mobile devices */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+
+  .letter {
+    font-size: 40px;
+    margin: 0 1px;
+  }
+
+  .search-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .search-input {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    padding: 0 12px;
+  }
+
+  .voice-search-btn {
+    font-size: 20px;
+    padding: 6px 10px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+}
 </style>
