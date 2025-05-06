@@ -2,12 +2,12 @@
   <div id="app" class="container">
     <div class="content">
       <div class="logo">
-        <span class="letter m">M</span>
-        <span class="letter u">u</span>
-        <span class="letter g">g</span>
-        <span class="letter a">a</span>
-        <span class="letter b">b</span>
-        <span class="letter o">o</span>
+        <span class="letter M">M</span>
+        <span class="letter U">U</span>
+        <span class="letter G">G</span>
+        <span class="letter A">A</span>
+        <span class="letter B">B</span>
+        <span class="letter O">O</span>
       </div>
   <div class="search-container">
     <input
@@ -17,11 +17,7 @@
       placeholder="Search Mugabo or type a URL"
       class="search-input google-style"
     />
-    <button class="search-icon" @click="handleSearch" aria-label="Search">
-      <svg focusable="false" viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#5f6368" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-      </svg>
-    </button>
+    <button class="search-icon" @click="handleSearch" aria-label="Search" />
   </div>
     </div>
     <footer class="footer">
@@ -71,6 +67,10 @@ html, body, #app {
   flex-direction: column;
   min-height: 100vh;
   justify-content: space-between;
+  background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .content {
@@ -97,12 +97,12 @@ html, body, #app {
   font-family: 'Product Sans', Arial, sans-serif;
 }
 
-.letter.m { color: #4285F4; }
-.letter.u { color: #DB4437; }
-.letter.g { color: #F4B400; }
-.letter.a { color: #4285F4; }
-.letter.b { color: #0F9D58; }
-.letter.o { color: #DB4437; }
+.letter.M { color: #4285F4; }
+.letter.U { color: #DB4437; }
+.letter.G { color: #F4B400; }
+.letter.A { color: #4285F4; }
+.letter.B { color: #0F9D58; }
+.letter.O { color: #DB4437; }
 
 .search-container {
   width: 584px;
@@ -116,17 +116,13 @@ html, body, #app {
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
-  background: transparent;
+  background: transparent url("data:image/svg+xml,%3csvg fill='%235f6368' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3e%3c/svg%3e") no-repeat center center;
+  background-size: 20px 20px;
   border: none;
   cursor: pointer;
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.search-icon svg {
-  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .search-input {
